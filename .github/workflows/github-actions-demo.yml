@@ -71,9 +71,9 @@ jobs:
           echo test1
           set "myVar=YES"
           if "%myVar%" == "YES" (
-            set MSMPI_INC=C:\Program Files (x86)\Microsoft SDKs\MPI\Include\
-            set MSMPI_LIB32=C:\Program Files (x86)\Microsoft SDKs\MPI\Lib\x86\
-            set MSMPI_LIB64=C:\Program Files (x86)\Microsoft SDKs\MPI\Lib\x64\
+            set "MSMPI_INC=C:\Program Files (x86)\Microsoft SDKs\MPI\Include\"
+            set "MSMPI_LIB32=C:\Program Files (x86)\Microsoft SDKs\MPI\Lib\x86\"
+            set "MSMPI_LIB64=C:\Program Files (x86)\Microsoft SDKs\MPI\Lib\x64\"
           )
           if "%myVar%" == "NO" (
             echo yahou
