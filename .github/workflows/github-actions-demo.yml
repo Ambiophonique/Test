@@ -1,0 +1,32 @@
+name: GitHub Actions Demo
+on:
+  workflow_dispatch:
+
+jobs:
+  ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test on Ubuntu
+        shell: bash
+        run: |
+          a=YES
+          if [ $a == "YES" ]; then
+            echo test1
+            echo test2
+            echo test3
+          fi
+          echo end
+
+  windows:
+    runs-on: windows-2019
+    steps:
+      - name: Test on Windows
+        shell: cmd
+        run: |
+          set "a=YES"
+          If /I "%a%" == "YES" (
+            echo test1
+            echo test2
+            echo test3
+          )
+          echo end
