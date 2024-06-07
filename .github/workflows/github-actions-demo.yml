@@ -24,6 +24,7 @@ jobs:
         shell: cmd
         run: |
           set "a=YES"
+          echo start
           If /I "%a%" == "YES" (
             echo test1
             echo test2
@@ -38,6 +39,22 @@ jobs:
         shell: cmd
         run: |
           set "a=YES"
+          echo start
+          if "%a%" == "YES" (
+            echo test1
+            echo test2
+            echo test3
+          )
+          echo end
+  
+  windows3:
+    runs-on: windows-2019
+    steps:
+      - name: Test 3 on Windows
+        shell: cmd
+        run: |
+          set a="YES"
+          echo start
           if "%a%" == "YES" (
             echo test1
             echo test2
