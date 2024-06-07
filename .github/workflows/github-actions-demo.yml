@@ -30,3 +30,17 @@ jobs:
             echo test3
           )
           echo end
+  
+  windows2:
+    runs-on: windows-2019
+    steps:
+      - name: Test 2 on Windows
+        shell: cmd
+        run: |
+          set "a=YES"
+          if "%a%" == "YES" (
+            echo test1
+            echo test2
+            echo test3
+          )
+          echo end
